@@ -12,7 +12,7 @@ upload-to-s3:
   interruptible: true
   tags: ["runner:apm-k8s-tweaked-metal"]
   script:
-    - echo "it works!" > /artifacts/${CI_JOB_ID}/s3.txt
+    - mkdir -p /artifacts/${CI_JOB_ID} && echo "it works!" > /artifacts/${CI_JOB_ID}/s3.txt
     - ./.gitlab/scripts/upload-results-to-s3.sh
   variables:
     KUBERNETES_SERVICE_ACCOUNT_OVERWRITE: dd-trace-go
