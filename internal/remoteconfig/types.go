@@ -5,7 +5,7 @@
 
 package remoteconfig
 
-import rc "github.com/DataDog/datadog-agent/pkg/remoteconfig/state"
+import rc "gopkg.in/DataDog/dd-trace-go.v1/internal/remoteconfig/state"
 
 type clientData struct {
 	State        *clientState  `json:"state,omitempty"`

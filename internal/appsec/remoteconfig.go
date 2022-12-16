@@ -16,7 +16,7 @@ import (
 	"gopkg.in/DataDog/dd-trace-go.v1/internal/log"
 	"gopkg.in/DataDog/dd-trace-go.v1/internal/remoteconfig"
 
-	rc "github.com/DataDog/datadog-agent/pkg/remoteconfig/state"
+	rc "gopkg.in/DataDog/dd-trace-go.v1/internal/remoteconfig/state"
 )
 
 func genApplyStatus(ack bool, err error) rc.ApplyStatus {

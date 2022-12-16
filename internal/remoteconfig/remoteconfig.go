@@ -18,7 +18,7 @@ import (
 	"strings"
 	"time"
 
-	rc "github.com/DataDog/datadog-agent/pkg/remoteconfig/state"
+	rc "gopkg.in/DataDog/dd-trace-go.v1/internal/remoteconfig/state"
 
 	"gopkg.in/DataDog/dd-trace-go.v1/internal/globalconfig"
 	"gopkg.in/DataDog/dd-trace-go.v1/internal/log"

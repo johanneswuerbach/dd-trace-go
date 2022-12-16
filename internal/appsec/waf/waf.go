@@ -41,7 +41,7 @@ import (
 	"unicode"
 	"unsafe"
 
-	rc "github.com/DataDog/datadog-agent/pkg/remoteconfig/state"
+	rc "gopkg.in/DataDog/dd-trace-go.v1/internal/remoteconfig/state"
 
 	// Do not remove the following imports which allow supporting package
 	// vendoring by properly copying all the files needed by CGO: the libddwaf

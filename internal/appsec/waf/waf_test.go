@@ -24,9 +24,10 @@ import (
 	"time"
 	"unsafe"
 
-	rc "github.com/DataDog/datadog-agent/pkg/remoteconfig/state"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+
+	rc "gopkg.in/DataDog/dd-trace-go.v1/internal/remoteconfig/state"
 )
 
 func TestHealth(t *testing.T) {

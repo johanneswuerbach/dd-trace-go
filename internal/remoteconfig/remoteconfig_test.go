@@ -12,8 +12,9 @@ import (
 	"strings"
 	"testing"
 
-	rc "github.com/DataDog/datadog-agent/pkg/remoteconfig/state"
 	"github.com/stretchr/testify/require"
+
+	rc "gopkg.in/DataDog/dd-trace-go.v1/internal/remoteconfig/state"
 )
 
 // The RC client relies on Repository (in the datadog-agent) which performs config signature validation
