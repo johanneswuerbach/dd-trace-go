@@ -232,12 +232,22 @@ func (a *appsec) enableRemoteActivation() error {
 	return nil
 }
 
-func (a *appsec) enableRCBlocking(handle wafHandleWrapper) error {
+func (a *appsec) enableRCBlocking(h wafHandleWrapper) error {
 	if a.rc == nil {
 		return fmt.Errorf("no valid remote configuration client")
 	}
 	a.registerRCProduct(rc.ProductASMData)
 	a.registerRCCapability(remoteconfig.ASMIPBlocking)
-	a.registerRCCallback(handle.asmDataCallback, rc.ProductASMData)
+	a.registerRCCallback(h.asmDataCallback, rc.ProductASMData)
+	return nil
+}
+
+func (a *appsec) enableRCRulesUpdate(h wafHandleWrapper) error {
+	if a.rc == nil {
+		return fmt.Errorf("no valid remote configuration client")
+	}
+	a.registerRCProduct(rc.ProductASMDD)
+	a.registerRCCapability(remoteconfig.ASMDDRules)
+	// TODO: register callback for ASM_DD
 	return nil
 }
